@@ -1,0 +1,246 @@
+/* --- Global Styles & Variables --- */
+:root {
+    --primary-color: #4a90e2; /* A nice blue */
+    --background-color: #f4f7f6;
+    --card-background: #ffffff;
+    --text-color: #333333;
+    --subtitle-color: #777777;
+    --border-color: #eaeaea;
+    --shadow-color: rgba(0, 0, 0, 0.08);
+    --font-family: 'Poppins', sans-serif;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    background: linear-gradient(120deg, #f8fafc 0%, #e3e6e8 100%);
+    font-family: 'Poppins', sans-serif;
+    min-height: 100vh;
+    margin: 0;
+}
+
+/* --- Main Container --- */
+.login-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+}
+
+.login-card {
+    background: #fff;
+    border-radius: 24px;
+    box-shadow: 0 8px 32px rgba(255, 111, 97, 0.15);
+    padding: 2.5rem 2rem;
+    width: 100%;
+    max-width: 400px;
+    transition: box-shadow 0.3s;
+    text-align: center;
+}
+
+/* --- Content Styling --- */
+h1 {
+    font-size: 2rem;
+    font-weight: 700;
+    color: #333;
+    margin-bottom: 0.5rem;
+    text-align: center;
+}
+
+.subtitle {
+    color: #888;
+    font-size: 1rem;
+    margin-bottom: 2rem;
+    text-align: center;
+}
+
+/* --- Google Button --- */
+.g_id_signin {
+    margin: 0 auto 1.5rem auto;
+    display: flex;
+    justify-content: center;
+    width: fit-content !important;
+    border-radius: 8px !important;
+}
+
+/* --- Profile View Styling --- */
+.profile-view {
+    text-align: center;
+}
+
+.profile-pic {
+    width: 72px;
+    height: 72px;
+    border-radius: 50%;
+    margin-bottom: 1rem;
+    box-shadow: 0 2px 8px rgba(255, 111, 97, 0.15);
+}
+
+#profile-name {
+    font-size: 24px;
+    font-weight: 600;
+}
+
+.sign-out-btn {
+    background: #FF6F61;
+    color: #fff;
+    border: none;
+    border-radius: 8px;
+    padding: 0.75rem 1.5rem;
+    font-size: 1rem;
+    font-weight: 600;
+    cursor: pointer;
+    margin-top: 1rem;
+    transition: background 0.2s;
+}
+
+.sign-out-btn:hover {
+    background: #e65c50;
+}
+
+/* --- Form Styling --- */
+.pitaara-form {
+    margin-bottom: 1.5rem;
+}
+
+.form-group {
+    margin-bottom: 1.2rem;
+    text-align: left;
+}
+
+.form-group label {
+    display: block;
+    font-size: 1rem;
+    color: #4a90e2;
+    margin-bottom: 0.4rem;
+    font-weight: 500;
+}
+
+.form-group input {
+    width: 100%;
+    padding: 0.75rem 1rem;
+    border: 2px solid #4a90e2;
+    border-radius: 10px;
+    font-size: 1rem;
+    font-family: 'Poppins', sans-serif;
+    outline: none;
+    transition: border-color 0.2s;
+    background: #f4f7f6;
+    color: #333;
+}
+
+.form-group input:focus {
+    border-color: #FF6F61;
+}
+
+.sign-in-btn {
+    width: 100%;
+    background: #4a90e2;
+    color: #fff;
+    border: none;
+    border-radius: 8px;
+    padding: 0.75rem 0;
+    font-size: 1.1rem;
+    font-weight: 600;
+    cursor: pointer;
+    margin-top: 0.5rem;
+    margin-bottom: 0.5rem;
+    transition: background 0.2s;
+}
+
+.sign-in-btn:hover {
+    background: #357abd;
+}
+
+.signup-link {
+    font-size: 0.95rem;
+    color: #4a90e2;
+    margin-bottom: 1rem;
+}
+
+.signup-link a {
+    color: #4a90e2;
+    text-decoration: underline;
+    font-weight: 500;
+}
+
+/* Floating Label Styles */
+.floating-label {
+    position: relative;
+}
+
+.floating-label input {
+    background: #fff;
+    border: 2px solid #4a90e2;
+    border-radius: 10px;
+    font-size: 1.1rem;
+    padding: 1.2rem 1rem 0.5rem 1rem;
+    width: 100%;
+    outline: none;
+    transition: border-color 0.2s;
+    color: #333;
+}
+
+.floating-label label {
+    position: absolute;
+    left: 1rem;
+    top: 1.1rem;
+    color: #aaa;
+    font-size: 1.1rem;
+    pointer-events: none;
+    background: transparent;
+    transition: 0.2s ease all;
+}
+
+.floating-label input:focus + label,
+.floating-label input:not(:placeholder-shown) + label {
+    top: 0.3rem;
+    left: 0.9rem;
+    font-size: 0.85rem;
+    color: #4a90e2;
+    background: #fff;
+    padding: 0 0.2rem;
+}
+
+/* Remove default label styling for floating labels */
+.form-group label {
+    margin-bottom: 0;
+    font-weight: 400;
+}
+
+/* --- Utility & Animation Classes --- */
+.hidden {
+    display: none;
+}
+
+.login-view, .profile-view {
+    animation: fadeIn 0.5s ease-in-out;
+}
+
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+        transform: translateY(-10px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+.brand-logo-fixed {
+    position: fixed;
+    top: 24px;
+    left: 32px;
+    z-index: 1000;
+}
+
+.brand-logo-fixed img {
+    height: 48px;
+    width: auto;
+    display: block;
+}
