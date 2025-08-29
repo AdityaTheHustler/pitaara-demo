@@ -30,6 +30,8 @@ function handleCredentialResponse(response) {
     const responsePayload = parseJwt(response.credential);
     if (!responsePayload) return;
     updateProfileUI(responsePayload);
+    // Save ID token for dashboard
+    localStorage.setItem('google_id_token', response.credential);
     showProfileView();
 }
 
